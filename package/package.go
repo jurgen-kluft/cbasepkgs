@@ -25,6 +25,7 @@ import (
 	"github.com/jurgen-kluft/xtime/package"
 	"github.com/jurgen-kluft/xunittest/package"
 	"github.com/jurgen-kluft/xuuid/package"
+	"github.com/jurgen-kluft/xvmem/package"
 )
 
 // GetPackage returns the package object of 'xbase'
@@ -54,6 +55,7 @@ func GetPackage() *denv.Package {
 	timepkg := xtime.GetPackage()
 	unittestpkg := xunittest.GetPackage()
 	uuidpkg := xuuid.GetPackage()
+	vmempkg := xvmem.GetPackage()
 
 	// The main (xbase) package
 	mainpkg := denv.NewPackage("xbasepkgs")
@@ -80,6 +82,7 @@ func GetPackage() *denv.Package {
 	mainpkg.AddPackage(timepkg)
 	mainpkg.AddPackage(unittestpkg)
 	mainpkg.AddPackage(uuidpkg)
+	mainpkg.AddPackage(vmempkg)
 
 	// 'xbase' library
 	mainlib := denv.SetupDefaultCppLibProject("xbasepkgs", "github.com\\jurgen-kluft\\xbasepkgs")
