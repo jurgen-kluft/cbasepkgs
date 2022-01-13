@@ -1,31 +1,32 @@
 package xbasepkgs
 
 import (
-	"github.com/jurgen-kluft/xactor/package"
-	"github.com/jurgen-kluft/xallocator/package"
-	"github.com/jurgen-kluft/xbase/package"
-	"github.com/jurgen-kluft/xbinmap/package"
-	"github.com/jurgen-kluft/xcmdline/package"
+	xactor "github.com/jurgen-kluft/xactor/package"
+	xallocator "github.com/jurgen-kluft/xallocator/package"
+	xbase "github.com/jurgen-kluft/xbase/package"
+	xbinmap "github.com/jurgen-kluft/xbinmap/package"
+	xcmdline "github.com/jurgen-kluft/xcmdline/package"
 	"github.com/jurgen-kluft/xcode/denv"
-	"github.com/jurgen-kluft/xcompress/package"
-	"github.com/jurgen-kluft/xcore/package"
-	"github.com/jurgen-kluft/xcrypto/package"
-	"github.com/jurgen-kluft/xentry/package"
-	"github.com/jurgen-kluft/xfilesystem/package"
-	"github.com/jurgen-kluft/xgenerics/package"
-	"github.com/jurgen-kluft/xhash/package"
-	"github.com/jurgen-kluft/xlang/package"
-	"github.com/jurgen-kluft/xp2p/package"
-	"github.com/jurgen-kluft/xrandom/package"
-	"github.com/jurgen-kluft/xsocket/package"
-	"github.com/jurgen-kluft/xstring/package"
-	"github.com/jurgen-kluft/xsystem/package"
-	"github.com/jurgen-kluft/xtext/package"
-	"github.com/jurgen-kluft/xthread/package"
-	"github.com/jurgen-kluft/xtime/package"
-	"github.com/jurgen-kluft/xunittest/package"
-	"github.com/jurgen-kluft/xuuid/package"
-	"github.com/jurgen-kluft/xvmem/package"
+	xcompress "github.com/jurgen-kluft/xcompress/package"
+	xcore "github.com/jurgen-kluft/xcore/package"
+	xcrypto "github.com/jurgen-kluft/xcrypto/package"
+	xecs "github.com/jurgen-kluft/xecs/package"
+	xentry "github.com/jurgen-kluft/xentry/package"
+	xfilesystem "github.com/jurgen-kluft/xfilesystem/package"
+	xgenerics "github.com/jurgen-kluft/xgenerics/package"
+	xhash "github.com/jurgen-kluft/xhash/package"
+	xlang "github.com/jurgen-kluft/xlang/package"
+	xp2p "github.com/jurgen-kluft/xp2p/package"
+	xrandom "github.com/jurgen-kluft/xrandom/package"
+	xsocket "github.com/jurgen-kluft/xsocket/package"
+	xstring "github.com/jurgen-kluft/xstring/package"
+	xsystem "github.com/jurgen-kluft/xsystem/package"
+	xtext "github.com/jurgen-kluft/xtext/package"
+	xthread "github.com/jurgen-kluft/xthread/package"
+	xtime "github.com/jurgen-kluft/xtime/package"
+	xunittest "github.com/jurgen-kluft/xunittest/package"
+	xuuid "github.com/jurgen-kluft/xuuid/package"
+	xvmem "github.com/jurgen-kluft/xvmem/package"
 )
 
 // GetPackage returns the package object of 'xbase'
@@ -40,6 +41,7 @@ func GetPackage() *denv.Package {
 	compresspkg := xcompress.GetPackage()
 	corepkg := xcore.GetPackage()
 	cryptopkg := xcrypto.GetPackage()
+	ecspkg := xecs.GetPackage()
 	entrypkg := xentry.GetPackage()
 	filesystempkg := xfilesystem.GetPackage()
 	genericspkg := xgenerics.GetPackage()
@@ -67,6 +69,7 @@ func GetPackage() *denv.Package {
 	mainpkg.AddPackage(compresspkg)
 	mainpkg.AddPackage(corepkg)
 	mainpkg.AddPackage(cryptopkg)
+	mainpkg.AddPackage(ecspkg)
 	mainpkg.AddPackage(entrypkg)
 	mainpkg.AddPackage(filesystempkg)
 	mainpkg.AddPackage(genericspkg)
