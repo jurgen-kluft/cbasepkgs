@@ -1,12 +1,12 @@
 package xbasepkgs
 
 import (
+	"github.com/jurgen-kluft/ccode/denv"
 	xactor "github.com/jurgen-kluft/xactor/package"
 	xallocator "github.com/jurgen-kluft/xallocator/package"
 	xbase "github.com/jurgen-kluft/xbase/package"
 	xbinmap "github.com/jurgen-kluft/xbinmap/package"
 	xcmdline "github.com/jurgen-kluft/xcmdline/package"
-	"github.com/jurgen-kluft/xcode/denv"
 	xcompress "github.com/jurgen-kluft/xcompress/package"
 	xcore "github.com/jurgen-kluft/xcore/package"
 	xcrypto "github.com/jurgen-kluft/xcrypto/package"
