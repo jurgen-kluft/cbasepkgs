@@ -1,8 +1,10 @@
 package cbasepkgs
 
 import (
+	c3dff "github.com/jurgen-kluft/c3dff/package"
 	cactor "github.com/jurgen-kluft/cactor/package"
 	callocator "github.com/jurgen-kluft/callocator/package"
+	catomic "github.com/jurgen-kluft/catomic/package"
 	cbase "github.com/jurgen-kluft/cbase/package"
 	cbinmap "github.com/jurgen-kluft/cbinmap/package"
 	ccmdline "github.com/jurgen-kluft/ccmdline/package"
@@ -12,14 +14,22 @@ import (
 	ccrypto "github.com/jurgen-kluft/ccrypto/package"
 	cecs "github.com/jurgen-kluft/cecs/package"
 	centry "github.com/jurgen-kluft/centry/package"
+	cfibers "github.com/jurgen-kluft/cfibers/package"
+	cfile "github.com/jurgen-kluft/cfile/package"
 	cfilesystem "github.com/jurgen-kluft/cfilesystem/package"
+	cgamedata "github.com/jurgen-kluft/cgamedata/package"
 	cgenerics "github.com/jurgen-kluft/cgenerics/package"
+	cgfx "github.com/jurgen-kluft/cgfx/package"
 	chash "github.com/jurgen-kluft/chash/package"
+	cjson "github.com/jurgen-kluft/cjson/package"
 	clang "github.com/jurgen-kluft/clang/package"
+	cmath "github.com/jurgen-kluft/cmath/package"
 	cp2p "github.com/jurgen-kluft/cp2p/package"
+	cpair "github.com/jurgen-kluft/cpair/package"
 	crandom "github.com/jurgen-kluft/crandom/package"
 	csocket "github.com/jurgen-kluft/csocket/package"
 	cstring "github.com/jurgen-kluft/cstring/package"
+	csuperalloc "github.com/jurgen-kluft/csuperalloc/package"
 	csystem "github.com/jurgen-kluft/csystem/package"
 	ctext "github.com/jurgen-kluft/ctext/package"
 	cthread "github.com/jurgen-kluft/cthread/package"
@@ -27,6 +37,7 @@ import (
 	cunittest "github.com/jurgen-kluft/cunittest/package"
 	cuuid "github.com/jurgen-kluft/cuuid/package"
 	cvmem "github.com/jurgen-kluft/cvmem/package"
+	cwindow "github.com/jurgen-kluft/cwindow/package"
 )
 
 // GetPackage returns the package object of 'cbase'
@@ -35,6 +46,7 @@ func GetPackage() *denv.Package {
 	// Dependencies
 	actorpkg := cactor.GetPackage()
 	allocatorpkg := callocator.GetPackage()
+	atomicpkg := catomic.GetPackage()
 	basepkg := cbase.GetPackage()
 	binmappkg := cbinmap.GetPackage()
 	cmdlinepkg := ccmdline.GetPackage()
@@ -43,14 +55,22 @@ func GetPackage() *denv.Package {
 	cryptopkg := ccrypto.GetPackage()
 	ecspkg := cecs.GetPackage()
 	entrypkg := centry.GetPackage()
+	fiberspkg := cfibers.GetPackage()
+	filepkg := cfile.GetPackage()
 	filesystempkg := cfilesystem.GetPackage()
+	gamedatapkg := cgamedata.GetPackage()
 	genericspkg := cgenerics.GetPackage()
+	gfxpkg := cgfx.GetPackage()
 	hashpkg := chash.GetPackage()
+	jsonpkg := cjson.GetPackage()
 	langpkg := clang.GetPackage()
+	mathpkg := cmath.GetPackage()
+	pairpkg := cpair.GetPackage()
 	p2ppkg := cp2p.GetPackage()
 	randompkg := crandom.GetPackage()
 	socketpkg := csocket.GetPackage()
 	stringpkg := cstring.GetPackage()
+	superallocpkg := csuperalloc.GetPackage()
 	systempkg := csystem.GetPackage()
 	textpkg := ctext.GetPackage()
 	threadpkg := cthread.GetPackage()
@@ -58,11 +78,14 @@ func GetPackage() *denv.Package {
 	unittestpkg := cunittest.GetPackage()
 	uuidpkg := cuuid.GetPackage()
 	vmempkg := cvmem.GetPackage()
+	windowpkg := cwindow.GetPackage()
+	p3dffpkg := c3dff.GetPackage()
 
 	// The main (cbasepkgs) package
 	mainpkg := denv.NewPackage("cbasepkgs")
 	mainpkg.AddPackage(actorpkg)
 	mainpkg.AddPackage(allocatorpkg)
+	mainpkg.AddPackage(atomicpkg)
 	mainpkg.AddPackage(basepkg)
 	mainpkg.AddPackage(binmappkg)
 	mainpkg.AddPackage(cmdlinepkg)
@@ -71,14 +94,22 @@ func GetPackage() *denv.Package {
 	mainpkg.AddPackage(cryptopkg)
 	mainpkg.AddPackage(ecspkg)
 	mainpkg.AddPackage(entrypkg)
+	mainpkg.AddPackage(fiberspkg)
+	mainpkg.AddPackage(filepkg)
 	mainpkg.AddPackage(filesystempkg)
+	mainpkg.AddPackage(gamedatapkg)
 	mainpkg.AddPackage(genericspkg)
+	mainpkg.AddPackage(gfxpkg)
 	mainpkg.AddPackage(hashpkg)
+	mainpkg.AddPackage(jsonpkg)
 	mainpkg.AddPackage(langpkg)
+	mainpkg.AddPackage(mathpkg)
+	mainpkg.AddPackage(pairpkg)
 	mainpkg.AddPackage(p2ppkg)
 	mainpkg.AddPackage(randompkg)
 	mainpkg.AddPackage(socketpkg)
 	mainpkg.AddPackage(stringpkg)
+	mainpkg.AddPackage(superallocpkg)
 	mainpkg.AddPackage(systempkg)
 	mainpkg.AddPackage(textpkg)
 	mainpkg.AddPackage(threadpkg)
@@ -86,6 +117,8 @@ func GetPackage() *denv.Package {
 	mainpkg.AddPackage(unittestpkg)
 	mainpkg.AddPackage(uuidpkg)
 	mainpkg.AddPackage(vmempkg)
+	mainpkg.AddPackage(windowpkg)
+	mainpkg.AddPackage(p3dffpkg)
 
 	// 'cbasepkgs' library
 	mainlib := denv.SetupDefaultCppLibProject("cbasepkgs", "github.com\\jurgen-kluft\\cbasepkgs")
