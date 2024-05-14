@@ -8,7 +8,7 @@ import (
 	cbase "github.com/jurgen-kluft/cbase/package"
 	cbinmap "github.com/jurgen-kluft/cbinmap/package"
 	ccmdline "github.com/jurgen-kluft/ccmdline/package"
-	"github.com/jurgen-kluft/ccode/denv"
+	ccode "github.com/jurgen-kluft/ccode"
 	ccompress "github.com/jurgen-kluft/ccompress/package"
 	ccore "github.com/jurgen-kluft/ccore/package"
 	ccrypto "github.com/jurgen-kluft/ccrypto/package"
@@ -21,6 +21,7 @@ import (
 	cgenerics "github.com/jurgen-kluft/cgenerics/package"
 	cgfx "github.com/jurgen-kluft/cgfx/package"
 	chash "github.com/jurgen-kluft/chash/package"
+	cjobs "github.com/jurgen-kluft/cjobs/package"
 	cjson "github.com/jurgen-kluft/cjson/package"
 	clang "github.com/jurgen-kluft/clang/package"
 	cmath "github.com/jurgen-kluft/cmath/package"
@@ -62,6 +63,7 @@ func GetPackage() *denv.Package {
 	genericspkg := cgenerics.GetPackage()
 	gfxpkg := cgfx.GetPackage()
 	hashpkg := chash.GetPackage()
+	jobspkg := cjobs.GetPackage()
 	jsonpkg := cjson.GetPackage()
 	langpkg := clang.GetPackage()
 	mathpkg := cmath.GetPackage()
