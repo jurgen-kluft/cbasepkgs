@@ -26,6 +26,9 @@ do
   
   echo
 
-  # go back to the root folder
+  # go back into the workspace folder
   cd ..
 done
+
+# go back into cbasepkgs
+cd cbasepkgs

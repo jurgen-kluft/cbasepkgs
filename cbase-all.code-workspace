@@ -1,0 +1,224 @@
+{
+	"folders": [
+		{
+			"path": "cbase"
+		},
+		{
+			"path": "cactor"
+		},
+		{
+			"path": "ccode"
+		},
+		{
+			"path": "cunittest"
+		},
+		{
+			"path": "cstring"
+		},
+		{
+			"path": "crandom"
+		},
+		{
+			"path": "ccmdline"
+		},
+		{
+			"path": "callocator"
+		},
+		{
+			"path": "cfilesystem"
+		},
+		{
+			"path": "cthread"
+		},
+		{
+			"path": "chash"
+		},
+		{
+			"path": "cbasepkgs"
+		},
+		{
+			"path": "ctext"
+		},
+		{
+			"path": "ctime"
+		},
+		{
+			"path": "cbinmap"
+		},
+		{
+			"path": "cstacktrace"
+		},
+		{
+			"path": "cdealloc"
+		},
+		{
+			"path": "catomic"
+		},
+		{
+			"path": "cfile"
+		},
+		{
+			"path": "cenv"
+		},
+		{
+			"path": "cecs"
+		},
+		{
+			"path": "csuperalloc"
+		},
+		{
+			"path": "centry"
+		},
+		{
+			"path": "cjson"
+		},
+		{
+			"path": "clang"
+		},
+		{
+			"path": "cpair"
+		},
+		{
+			"path": "c3dff"
+		},
+		{
+			"path": "ccrypto"
+		},
+		{
+			"path": "cgfx"
+		},
+		{
+			"path": "cmath"
+		},
+		{
+			"path": "cvulkan"
+		},
+		{
+			"path": "cwindow"
+		},
+		{
+			"path": "cgamedata"
+		},
+		{
+			"path": "csystem"
+		},
+		{
+			"path": "cvmem"
+		},
+		{
+			"path": "cbenchmark"
+		},
+		{
+			"path": "ccore"
+		},
+		{
+			"path": "cfort"
+		},
+		{
+			"path": "E:/Dev.NET/.NET_BuildSystem"
+		},
+		{
+			"path": "cgamelogic"
+		},
+		{
+			"path": "cmsg"
+		},
+		{
+			"path": "cjobs"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.snd": "cml",
+			"cutility": "cpp",
+			"initializer_list": "cpp",
+			"cstring": "cpp",
+			"memory": "cpp",
+			"limits": "cpp",
+			"type_traits": "cpp",
+			"utility": "cpp",
+			"cmemory0": "cpp",
+			"string": "cpp",
+			"list": "cpp",
+			"ciosbase": "cpp",
+			"system_error": "cpp",
+			"clocale": "cpp",
+			"typeinfo": "cpp",
+			"ios": "cpp",
+			"*.tcc": "cpp",
+			"array": "cpp",
+			"vector": "cpp",
+			"atomic": "cpp",
+			"algorithm": "cpp",
+			"cctype": "cpp",
+			"chrono": "cpp",
+			"cmath": "cpp",
+			"compare": "cpp",
+			"concepts": "cpp",
+			"condition_variable": "cpp",
+			"cstddef": "cpp",
+			"cstdint": "cpp",
+			"cstdio": "cpp",
+			"cstdlib": "cpp",
+			"ctime": "cpp",
+			"cwchar": "cpp",
+			"deque": "cpp",
+			"exception": "cpp",
+			"fstream": "cpp",
+			"iomanip": "cpp",
+			"iosfwd": "cpp",
+			"iostream": "cpp",
+			"istream": "cpp",
+			"iterator": "cpp",
+			"map": "cpp",
+			"mutex": "cpp",
+			"new": "cpp",
+			"ostream": "cpp",
+			"random": "cpp",
+			"ratio": "cpp",
+			"sstream": "cpp",
+			"stack": "cpp",
+			"stdexcept": "cpp",
+			"streambuf": "cpp",
+			"thread": "cpp",
+			"tuple": "cpp",
+			"unordered_map": "cpp",
+			"cfacet": "cpp",
+			"chash": "cpp",
+			"clocinfo": "cpp",
+			"clocmon": "cpp",
+			"clocnum": "cpp",
+			"cloctime": "cpp",
+			"cmemory": "cpp",
+			"ctr1common": "cpp",
+			"ctree": "cpp",
+			"c_debug.h": "c",
+			"functional": "cpp",
+			"c_binary_search.h": "c",
+			"ortho_lh_no.h": "c",
+			"xmemory0": "cpp",
+			"xlocmes": "cpp",
+			"xlocmon": "cpp",
+			"xlocnum": "cpp",
+			"xloctime": "cpp",
+			"xlocale": "cpp",
+			"xiosbase": "cpp",
+			"queue": "cpp",
+			"xtree": "cpp",
+			"xstring": "cpp",
+			"xutility": "cpp",
+			"stop_token": "cpp"
+		},
+		"workbench.colorCustomizations": {
+			"sash.hoverBorder": "#c9e34a",
+			"titleBar.activeBackground": "#b9d921",
+			"titleBar.activeForeground": "#15202b",
+			"titleBar.inactiveBackground": "#b9d92199",
+			"titleBar.inactiveForeground": "#15202b99",
+			"commandCenter.border": "#15202b99"
+		},
+		"peacock.color": "#b9d921",
+		"todo-tree.tree.scanMode": "current file",
+		"dotnet.defaultSolution": "disable"
+	}
+}

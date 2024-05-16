@@ -1,43 +1,50 @@
 #!/usr/bin/env bash
 
-git clone https://github.com/jurgen-kluft/cbase.git
-git clone https://github.com/jurgen-kluft/cactor.git
-git clone https://github.com/jurgen-kluft/callocator.git
-git clone https://github.com/jurgen-kluft/csuperalloc.git
-git clone https://github.com/jurgen-kluft/catomic.git
-git clone https://github.com/jurgen-kluft/cbasepkgs.git
-git clone https://github.com/jurgen-kluft/cbinmap.git
-git clone https://github.com/jurgen-kluft/ccmdline.git
-git clone https://github.com/jurgen-kluft/ccompress.git
-git clone https://github.com/jurgen-kluft/ccore.git
-git clone https://github.com/jurgen-kluft/ccrypto.git
-git clone https://github.com/jurgen-kluft/cecs.git
-git clone https://github.com/jurgen-kluft/centry.git
-git clone https://github.com/jurgen-kluft/cfibers.git
-git clone https://github.com/jurgen-kluft/cfile.git
-git clone https://github.com/jurgen-kluft/cfilesystem.git
-git clone https://github.com/jurgen-kluft/cgenerics.git
-git clone https://github.com/jurgen-kluft/chash.git
-git clone https://github.com/jurgen-kluft/cjson.git
-git clone https://github.com/jurgen-kluft/crandom.git
-git clone https://github.com/jurgen-kluft/csocket.git
-git clone https://github.com/jurgen-kluft/cstring.git
-git clone https://github.com/jurgen-kluft/csystem.git
-git clone https://github.com/jurgen-kluft/ctext.git
-git clone https://github.com/jurgen-kluft/cthread.git
-git clone https://github.com/jurgen-kluft/ctime.git
-git clone https://github.com/jurgen-kluft/cuuid.git
-git clone https://github.com/jurgen-kluft/cpair.git
-git clone https://github.com/jurgen-kluft/c3dff.git
-git clone https://github.com/jurgen-kluft/cmath.git
-git clone https://github.com/jurgen-kluft/cgfx.git
-git clone https://github.com/jurgen-kluft/cwindow.git
-git clone https://github.com/jurgen-kluft/cgamedata.git
-git clone https://github.com/jurgen-kluft/cunittest.git
-git clone https://github.com/jurgen-kluft/chistogram.git
-git clone https://github.com/jurgen-kluft/cbenchmark.git
-git clone https://github.com/jurgen-kluft/ccode.git
-git clone https://github.com/jurgen-kluft/cfort.git
-git clone https://github.com/jurgen-kluft/cvmem.git
-git clone https://github.com/jurgen-kluft/cgamelogic.git
-git clone https://github.com/jurgen-kluft/cjobs.git
+yell() { echo "$0: $*" >&2; }
+die() { yell "$*"; exit 111; }
+try() { "$@" || cd cbasepkgs || yell "cannot $*"; }
+verify() { "$@" || cd cbasepkgs || die "cannot $*"; }
+
+cd ..
+try git clone https://github.com/jurgen-kluft/cbase.git
+try git clone https://github.com/jurgen-kluft/cactor.git
+try git clone https://github.com/jurgen-kluft/callocator.git
+try git clone https://github.com/jurgen-kluft/csuperalloc.git
+try git clone https://github.com/jurgen-kluft/catomic.git
+try git clone https://github.com/jurgen-kluft/cbasepkgs.git
+try git clone https://github.com/jurgen-kluft/cbinmap.git
+try git clone https://github.com/jurgen-kluft/ccmdline.git
+try git clone https://github.com/jurgen-kluft/ccompress.git
+try git clone https://github.com/jurgen-kluft/ccore.git
+try git clone https://github.com/jurgen-kluft/ccrypto.git
+try git clone https://github.com/jurgen-kluft/cecs.git
+try git clone https://github.com/jurgen-kluft/centry.git
+try git clone https://github.com/jurgen-kluft/cfibers.git
+try git clone https://github.com/jurgen-kluft/cfile.git
+try git clone https://github.com/jurgen-kluft/cfilesystem.git
+try git clone https://github.com/jurgen-kluft/cgenerics.git
+try git clone https://github.com/jurgen-kluft/chash.git
+try git clone https://github.com/jurgen-kluft/cjson.git
+try git clone https://github.com/jurgen-kluft/crandom.git
+try git clone https://github.com/jurgen-kluft/csocket.git
+try git clone https://github.com/jurgen-kluft/cstring.git
+try git clone https://github.com/jurgen-kluft/csystem.git
+try git clone https://github.com/jurgen-kluft/ctext.git
+try git clone https://github.com/jurgen-kluft/cthread.git
+try git clone https://github.com/jurgen-kluft/ctime.git
+try git clone https://github.com/jurgen-kluft/cuuid.git
+try git clone https://github.com/jurgen-kluft/cpair.git
+try git clone https://github.com/jurgen-kluft/c3dff.git
+try git clone https://github.com/jurgen-kluft/cmath.git
+try git clone https://github.com/jurgen-kluft/cgfx.git
+try git clone https://github.com/jurgen-kluft/cwindow.git
+try git clone https://github.com/jurgen-kluft/cgamedata.git
+try git clone https://github.com/jurgen-kluft/cunittest.git
+try git clone https://github.com/jurgen-kluft/chistogram.git
+try git clone https://github.com/jurgen-kluft/cbenchmark.git
+try git clone https://github.com/jurgen-kluft/ccode.git
+try git clone https://github.com/jurgen-kluft/cfort.git
+try git clone https://github.com/jurgen-kluft/cvmem.git
+try git clone https://github.com/jurgen-kluft/cgamelogic.git
+try git clone https://github.com/jurgen-kluft/cjobs.git
+cd cbasepkgs
