@@ -8,7 +8,7 @@ import (
 	cbase "github.com/jurgen-kluft/cbase/package"
 	cbinmap "github.com/jurgen-kluft/cbinmap/package"
 	ccmdline "github.com/jurgen-kluft/ccmdline/package"
-	ccode "github.com/jurgen-kluft/ccode"
+	"github.com/jurgen-kluft/ccode/denv"
 	ccompress "github.com/jurgen-kluft/ccompress/package"
 	ccore "github.com/jurgen-kluft/ccore/package"
 	ccrypto "github.com/jurgen-kluft/ccrypto/package"
@@ -17,10 +17,10 @@ import (
 	cfibers "github.com/jurgen-kluft/cfibers/package"
 	cfile "github.com/jurgen-kluft/cfile/package"
 	cfilesystem "github.com/jurgen-kluft/cfilesystem/package"
-	cgamedata "github.com/jurgen-kluft/cgamedata/package"
 	cgenerics "github.com/jurgen-kluft/cgenerics/package"
-	cgfx "github.com/jurgen-kluft/cgfx/package"
+	charon "github.com/jurgen-kluft/charon/package"
 	chash "github.com/jurgen-kluft/chash/package"
+	chydra "github.com/jurgen-kluft/chydra/package"
 	cjobs "github.com/jurgen-kluft/cjobs/package"
 	cjson "github.com/jurgen-kluft/cjson/package"
 	clang "github.com/jurgen-kluft/clang/package"
@@ -59,9 +59,9 @@ func GetPackage() *denv.Package {
 	fiberspkg := cfibers.GetPackage()
 	filepkg := cfile.GetPackage()
 	filesystempkg := cfilesystem.GetPackage()
-	gamedatapkg := cgamedata.GetPackage()
+	charonpkg := charon.GetPackage()
 	genericspkg := cgenerics.GetPackage()
-	gfxpkg := cgfx.GetPackage()
+	hydrapkg := chydra.GetPackage()
 	hashpkg := chash.GetPackage()
 	jobspkg := cjobs.GetPackage()
 	jsonpkg := cjson.GetPackage()
@@ -99,10 +99,11 @@ func GetPackage() *denv.Package {
 	mainpkg.AddPackage(fiberspkg)
 	mainpkg.AddPackage(filepkg)
 	mainpkg.AddPackage(filesystempkg)
-	mainpkg.AddPackage(gamedatapkg)
+	mainpkg.AddPackage(charonpkg)
 	mainpkg.AddPackage(genericspkg)
-	mainpkg.AddPackage(gfxpkg)
+	mainpkg.AddPackage(hydrapkg)
 	mainpkg.AddPackage(hashpkg)
+	mainpkg.AddPackage(jobspkg)
 	mainpkg.AddPackage(jsonpkg)
 	mainpkg.AddPackage(langpkg)
 	mainpkg.AddPackage(mathpkg)

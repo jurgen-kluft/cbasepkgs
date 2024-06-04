@@ -38,7 +38,6 @@ try git clone https://github.com/jurgen-kluft/c3dff.git
 try git clone https://github.com/jurgen-kluft/cmath.git
 try git clone https://github.com/jurgen-kluft/cgfx.git
 try git clone https://github.com/jurgen-kluft/cwindow.git
-try git clone https://github.com/jurgen-kluft/cgamedata.git
 try git clone https://github.com/jurgen-kluft/cunittest.git
 try git clone https://github.com/jurgen-kluft/chistogram.git
 try git clone https://github.com/jurgen-kluft/cbenchmark.git
@@ -47,4 +46,7 @@ try git clone https://github.com/jurgen-kluft/cfort.git
 try git clone https://github.com/jurgen-kluft/cvmem.git
 try git clone https://github.com/jurgen-kluft/cgamelogic.git
 try git clone https://github.com/jurgen-kluft/cjobs.git
+try git clone https://github.com/jurgen-kluft/cvulkan.git
+try git clone https://github.com/jurgen-kluft/charon.git
+try git clone https://github.com/jurgen-kluft/chydra.git
 cd cbasepkgs
