@@ -14,7 +14,6 @@ import (
 	ccrypto "github.com/jurgen-kluft/ccrypto/package"
 	cecs "github.com/jurgen-kluft/cecs/package"
 	centry "github.com/jurgen-kluft/centry/package"
-	cfibers "github.com/jurgen-kluft/cfibers/package"
 	cfile "github.com/jurgen-kluft/cfile/package"
 	cfilesystem "github.com/jurgen-kluft/cfilesystem/package"
 	cgenerics "github.com/jurgen-kluft/cgenerics/package"
@@ -56,7 +55,6 @@ func GetPackage() *denv.Package {
 	cryptopkg := ccrypto.GetPackage()
 	ecspkg := cecs.GetPackage()
 	entrypkg := centry.GetPackage()
-	fiberspkg := cfibers.GetPackage()
 	filepkg := cfile.GetPackage()
 	filesystempkg := cfilesystem.GetPackage()
 	charonpkg := charon.GetPackage()
@@ -96,7 +94,6 @@ func GetPackage() *denv.Package {
 	mainpkg.AddPackage(cryptopkg)
 	mainpkg.AddPackage(ecspkg)
 	mainpkg.AddPackage(entrypkg)
-	mainpkg.AddPackage(fiberspkg)
 	mainpkg.AddPackage(filepkg)
 	mainpkg.AddPackage(filesystempkg)
 	mainpkg.AddPackage(charonpkg)
