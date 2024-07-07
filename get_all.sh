@@ -36,6 +36,7 @@ try git clone https://github.com/jurgen-kluft/cuuid.git
 try git clone https://github.com/jurgen-kluft/cpair.git
 try git clone https://github.com/jurgen-kluft/c3dff.git
 try git clone https://github.com/jurgen-kluft/cmath.git
+try git clone https://github.com/jurgen-kluft/cmsg.git
 try git clone https://github.com/jurgen-kluft/cgfx.git
 try git clone https://github.com/jurgen-kluft/cwindow.git
 try git clone https://github.com/jurgen-kluft/cunittest.git

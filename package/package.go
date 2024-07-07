@@ -24,6 +24,7 @@ import (
 	cjson "github.com/jurgen-kluft/cjson/package"
 	clang "github.com/jurgen-kluft/clang/package"
 	cmath "github.com/jurgen-kluft/cmath/package"
+	cmsg "github.com/jurgen-kluft/cmsg/package"
 	cp2p "github.com/jurgen-kluft/cp2p/package"
 	cpair "github.com/jurgen-kluft/cpair/package"
 	crandom "github.com/jurgen-kluft/crandom/package"
@@ -65,6 +66,7 @@ func GetPackage() *denv.Package {
 	jsonpkg := cjson.GetPackage()
 	langpkg := clang.GetPackage()
 	mathpkg := cmath.GetPackage()
+	msgpkg := cmsg.GetPackage()
 	pairpkg := cpair.GetPackage()
 	p2ppkg := cp2p.GetPackage()
 	randompkg := crandom.GetPackage()
@@ -104,6 +106,7 @@ func GetPackage() *denv.Package {
 	mainpkg.AddPackage(jsonpkg)
 	mainpkg.AddPackage(langpkg)
 	mainpkg.AddPackage(mathpkg)
+	mainpkg.AddPackage(msgpkg)
 	mainpkg.AddPackage(pairpkg)
 	mainpkg.AddPackage(p2ppkg)
 	mainpkg.AddPackage(randompkg)
