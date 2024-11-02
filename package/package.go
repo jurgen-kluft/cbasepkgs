@@ -6,7 +6,6 @@ import (
 	callocator "github.com/jurgen-kluft/callocator/package"
 	catomic "github.com/jurgen-kluft/catomic/package"
 	cbase "github.com/jurgen-kluft/cbase/package"
-	cbinmap "github.com/jurgen-kluft/cbinmap/package"
 	ccmdline "github.com/jurgen-kluft/ccmdline/package"
 	"github.com/jurgen-kluft/ccode/denv"
 	ccompress "github.com/jurgen-kluft/ccompress/package"
@@ -49,7 +48,6 @@ func GetPackage() *denv.Package {
 	allocatorpkg := callocator.GetPackage()
 	atomicpkg := catomic.GetPackage()
 	basepkg := cbase.GetPackage()
-	binmappkg := cbinmap.GetPackage()
 	cmdlinepkg := ccmdline.GetPackage()
 	compresspkg := ccompress.GetPackage()
 	corepkg := ccore.GetPackage()
@@ -89,7 +87,6 @@ func GetPackage() *denv.Package {
 	mainpkg.AddPackage(allocatorpkg)
 	mainpkg.AddPackage(atomicpkg)
 	mainpkg.AddPackage(basepkg)
-	mainpkg.AddPackage(binmappkg)
 	mainpkg.AddPackage(cmdlinepkg)
 	mainpkg.AddPackage(compresspkg)
 	mainpkg.AddPackage(corepkg)
