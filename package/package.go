@@ -121,8 +121,8 @@ func GetPackage() *denv.Package {
 	mainpkg.AddPackage(p3dffpkg)
 
 	// 'cbasepkgs' library
-	mainlib := denv.SetupDefaultCppLibProject("cbasepkgs", "github.com\\jurgen-kluft\\cbasepkgs")
-	mainlib.Dependencies = append(mainlib.Dependencies, unittestpkg.GetMainLib())
+	mainlib := denv.SetupCppLibProject("cbasepkgs", "github.com\\jurgen-kluft\\cbasepkgs")
+	mainlib.AddDependencies(unittestpkg.GetMainLib()...)
 
 	mainpkg.AddMainLib(mainlib)
 	return mainpkg
