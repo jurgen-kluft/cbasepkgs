@@ -82,7 +82,7 @@ func GetPackage() *denv.Package {
 	p3dffpkg := c3dff.GetPackage()
 
 	// The main (cbasepkgs) package
-	mainpkg := denv.NewPackage("cbasepkgs")
+	mainpkg := denv.NewPackage("github.com\\jurgen-kluft", "cbasepkgs")
 	mainpkg.AddPackage(actorpkg)
 	mainpkg.AddPackage(allocatorpkg)
 	mainpkg.AddPackage(atomicpkg)
@@ -121,7 +121,7 @@ func GetPackage() *denv.Package {
 	mainpkg.AddPackage(p3dffpkg)
 
 	// 'cbasepkgs' library
-	mainlib := denv.SetupCppLibProject("cbasepkgs", "github.com\\jurgen-kluft\\cbasepkgs")
+	mainlib := denv.SetupCppLibProject(mainpkg, "cbasepkgs")
 	mainlib.AddDependencies(unittestpkg.GetMainLib()...)
 
 	mainpkg.AddMainLib(mainlib)
