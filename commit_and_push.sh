@@ -105,18 +105,18 @@ for dir in "${subdirectories[@]}"; do
     else
 
         # Remove origin and add the SSH remote URL
-        git remote remove origin
-        git remote add origin git@github.com:jurgen-kluft/$dir.git
+        # git remote remove origin
+        # git remote add origin git@github.com:jurgen-kluft/$dir.git
 
         # Figure out if we are on main or master branch and set upstream accordingly
-        current_branch=$(git rev-parse --abbrev-ref HEAD)
-        if [ "$current_branch" != "main" ] && [ "$current_branch" != "master" ]; then
-            echo "Warning: You are not on the main or master branch in $dir. Skipping push."
-            cd "$original_dir"
-            continue
-        fi
+        # current_branch=$(git rev-parse --abbrev-ref HEAD)
+        # if [ "$current_branch" != "main" ] && [ "$current_branch" != "master" ]; then
+        #     echo "Warning: You are not on the main or master branch in $dir. Skipping push."
+        #     cd "$original_dir"
+        #     continue
+        # fi
 
-        git branch --set-upstream-to=origin/$current_branch $current_branch
+        # git branch --set-upstream-to=origin/$current_branch $current_branch
 
         # Add all changes to the staging area
         echo "Adding changes to staging area in $dir..."
