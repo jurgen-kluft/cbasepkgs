@@ -122,7 +122,7 @@ func GetPackage() *denv.Package {
 
 	// 'cbasepkgs' library
 	mainlib := denv.SetupCppLibProject(mainpkg, "cbasepkgs")
-	mainlib.AddDependencies(unittestpkg.GetMainLib()...)
+	mainlib.AddDependencies(unittestpkg.GetMainLib())
 
 	mainpkg.AddMainLib(mainlib)
 	return mainpkg
