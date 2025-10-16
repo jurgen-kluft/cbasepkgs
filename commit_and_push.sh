@@ -99,6 +99,8 @@ for dir in "${subdirectories[@]}"; do
 
     pwd # Print the current working directory
 
+    current_branch=$(git rev-parse --abbrev-ref HEAD)
+
     # Check if there are any changes to commit
     if [ -z "$(git status --porcelain)" ]; then
         echo "No changes to commit in $dir."
@@ -109,7 +111,6 @@ for dir in "${subdirectories[@]}"; do
         # git remote add origin git@github.com:jurgen-kluft/$dir.git
 
         # Figure out if we are on main or master branch and set upstream accordingly
-        current_branch=$(git rev-parse --abbrev-ref HEAD)
         if [ "$current_branch" != "main" ] && [ "$current_branch" != "master" ]; then
             echo "Warning: You are not on the main or master branch in $dir. Skipping push."
             cd "$original_dir"
@@ -140,14 +141,14 @@ for dir in "${subdirectories[@]}"; do
 
     # Check if there are any changes to push
     # We can be either on main or master branch
-    current_branch=$(git rev-parse --abbrev-ref HEAD)
     if [ "$current_branch" != "main" ] && [ "$current_branch" != "master" ]; then
         echo "Warning: You are not on the main or master branch in $dir. Skipping push."
         cd "$original_dir"
         continue
     fi
+
     # Check if there are any changes to push
-    if [ -z "$(git log origin/$current_branch..$current_branch)" ]; then
+    if git diff --cached --quiet && git diff --quiet origin/$current_branch $current_branch; then
         echo "No changes to push in $dir."
         cd "$original_dir"
         continue
@@ -156,7 +157,7 @@ for dir in "${subdirectories[@]}"; do
     while true; do
         # Attempt to push changes
         echo "Attempting to push changes to remote repository..."
-        git push --set-upstream origin "$current_branch"
+        git push --set-upstream origin $current_branch
         if [ $? -eq 0 ]; then
             echo "Git push successful in $dir."
             break
