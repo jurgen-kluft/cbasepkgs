@@ -109,12 +109,12 @@ for dir in "${subdirectories[@]}"; do
         # git remote add origin git@github.com:jurgen-kluft/$dir.git
 
         # Figure out if we are on main or master branch and set upstream accordingly
-        # current_branch=$(git rev-parse --abbrev-ref HEAD)
-        # if [ "$current_branch" != "main" ] && [ "$current_branch" != "master" ]; then
-        #     echo "Warning: You are not on the main or master branch in $dir. Skipping push."
-        #     cd "$original_dir"
-        #     continue
-        # fi
+        current_branch=$(git rev-parse --abbrev-ref HEAD)
+        if [ "$current_branch" != "main" ] && [ "$current_branch" != "master" ]; then
+            echo "Warning: You are not on the main or master branch in $dir. Skipping push."
+            cd "$original_dir"
+            continue
+        fi
 
         # git branch --set-upstream-to=origin/$current_branch $current_branch
 
@@ -156,7 +156,7 @@ for dir in "${subdirectories[@]}"; do
     while true; do
         # Attempt to push changes
         echo "Attempting to push changes to remote repository..."
-        git push -v
+        git push --set-upstream origin "$current_branch"
         if [ $? -eq 0 ]; then
             echo "Git push successful in $dir."
             break
