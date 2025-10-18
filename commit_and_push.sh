@@ -147,13 +147,6 @@ for dir in "${subdirectories[@]}"; do
         continue
     fi
 
-    # Check if there are any changes to push
-    if git diff --cached --quiet && git diff --quiet origin/$current_branch $current_branch; then
-        echo "No changes to push in $dir."
-        cd "$original_dir"
-        continue
-    fi
-
     while true; do
         # Attempt to push changes
         echo "Attempting to push changes to remote repository..."
