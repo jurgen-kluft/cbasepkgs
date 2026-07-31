@@ -64,16 +64,15 @@ subdirectories=(
     "cunittest"
     "cuuid"
     "cvkmem"
-    "cvmem"
     "cvolk"
     "cvulkan"
     "cwindow"
-    "rdno_core"
-    "rdno_wifi"
-    "rdno_network"
-    "rdno_blinky"
-    "rdno_sensors"
-    "rdno_bedpresence"
+    # "rdno_core"
+    # "rdno_wifi"
+    # "rdno_network"
+    # "rdno_blinky"
+    # "rdno_sensors"
+    # "rdno_bedpresence"
 )
 
 # Commit message

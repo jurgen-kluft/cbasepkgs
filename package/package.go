@@ -7,7 +7,6 @@ import (
 	catomic "github.com/jurgen-kluft/catomic/package"
 	cbase "github.com/jurgen-kluft/cbase/package"
 	ccmdline "github.com/jurgen-kluft/ccmdline/package"
-	"github.com/jurgen-kluft/ccode/denv"
 	ccompress "github.com/jurgen-kluft/ccompress/package"
 	ccore "github.com/jurgen-kluft/ccore/package"
 	ccrypto "github.com/jurgen-kluft/ccrypto/package"
@@ -35,8 +34,8 @@ import (
 	ctime "github.com/jurgen-kluft/ctime/package"
 	cunittest "github.com/jurgen-kluft/cunittest/package"
 	cuuid "github.com/jurgen-kluft/cuuid/package"
-	cvmem "github.com/jurgen-kluft/cvmem/package"
 	cwindow "github.com/jurgen-kluft/cwindow/package"
+	"github.com/jurgen-kluft/gide/denv"
 )
 
 // GetPackage returns the package object of 'cbase'
@@ -75,9 +74,8 @@ func GetPackage() *denv.Package {
 	timepkg := ctime.GetPackage()
 	unittestpkg := cunittest.GetPackage()
 	uuidpkg := cuuid.GetPackage()
-	vmempkg := cvmem.GetPackage()
 	windowpkg := cwindow.GetPackage()
-	p3dffpkg := c3dff.GetPackage()
+	c3dffpkg := c3dff.GetPackage()
 
 	// The main (cbasepkgs) package
 	mainpkg := denv.NewPackage("github.com\\jurgen-kluft", "cbasepkgs")
@@ -113,14 +111,14 @@ func GetPackage() *denv.Package {
 	mainpkg.AddPackage(timepkg)
 	mainpkg.AddPackage(unittestpkg)
 	mainpkg.AddPackage(uuidpkg)
-	mainpkg.AddPackage(vmempkg)
 	mainpkg.AddPackage(windowpkg)
-	mainpkg.AddPackage(p3dffpkg)
+	mainpkg.AddPackage(c3dffpkg)
 
 	// 'cbasepkgs' library
 	mainlib := denv.SetupCppLibProject(mainpkg, "cbasepkgs")
 	mainlib.AddDependencies(unittestpkg.GetMainLib())
 
 	mainpkg.AddMainLib(mainlib)
+
 	return mainpkg
 }
