@@ -13,6 +13,7 @@ subdirectories=(
     "ccmdline"
     "ccode"
     "ccompress"
+    "cconartist"
     "ccore"
     "ccrypto"
     "cd3d12"
@@ -22,6 +23,8 @@ subdirectories=(
     "cds"
     "cecs"
     "centry"
+    "cfenc"
+    "cffk"
     "cfibers"
     "cfile"
     "cfilesystem"
@@ -31,24 +34,29 @@ subdirectories=(
     "cgenerics"
     "cgfx"
     "cglfw"
+    "cgx2"
     "charon"
     "chash"
     "chistogram"
     "chlslpp"
     "chshg"
     "cimgui"
+    "cimtui"
     "cjobs"
     "cjson"
+    "ckalman"
     "clang"
     "cmacos"
     "cmath"
     "cmimalloc"
+    "cmmio"
     "cmsg"
+    "cmui"
     "cp2p"
     "cpair"
     "cpath"
     "crandom"
-    "cred"
+    "craylib"
     "crendergraph"
     "cscode"
     "csocket"
@@ -159,8 +167,6 @@ for dir in "${subdirectories[@]}"; do
         fi
     done
 
-    # Change back to the original directory
-    cd "$original_dir" || { echo "Error: Could not return to original directory $original_dir. Exiting."; exit 1; }
     echo ""
 done
 

@@ -8,6 +8,7 @@ import (
 	cbase "github.com/jurgen-kluft/cbase/package"
 	ccmdline "github.com/jurgen-kluft/ccmdline/package"
 	ccompress "github.com/jurgen-kluft/ccompress/package"
+	cconartist "github.com/jurgen-kluft/cconartist/package"
 	ccore "github.com/jurgen-kluft/ccore/package"
 	ccrypto "github.com/jurgen-kluft/ccrypto/package"
 	cecs "github.com/jurgen-kluft/cecs/package"
@@ -15,16 +16,20 @@ import (
 	cfile "github.com/jurgen-kluft/cfile/package"
 	cfilesystem "github.com/jurgen-kluft/cfilesystem/package"
 	cgenerics "github.com/jurgen-kluft/cgenerics/package"
+	cgx2 "github.com/jurgen-kluft/cgx2/package"
 	charon "github.com/jurgen-kluft/charon/package"
 	chash "github.com/jurgen-kluft/chash/package"
 	chydra "github.com/jurgen-kluft/chydra/package"
 	cjobs "github.com/jurgen-kluft/cjobs/package"
 	cjson "github.com/jurgen-kluft/cjson/package"
+	ckalman "github.com/jurgen-kluft/ckalman/package"
 	cmath "github.com/jurgen-kluft/cmath/package"
+	cmmio "github.com/jurgen-kluft/cmmio/package"
 	cmsg "github.com/jurgen-kluft/cmsg/package"
 	cp2p "github.com/jurgen-kluft/cp2p/package"
 	cpair "github.com/jurgen-kluft/cpair/package"
 	crandom "github.com/jurgen-kluft/crandom/package"
+	craylib "github.com/jurgen-kluft/craylib/package"
 	csocket "github.com/jurgen-kluft/csocket/package"
 	cstring "github.com/jurgen-kluft/cstring/package"
 	csuperalloc "github.com/jurgen-kluft/csuperalloc/package"
@@ -48,6 +53,7 @@ func GetPackage() *denv.Package {
 	basepkg := cbase.GetPackage()
 	cmdlinepkg := ccmdline.GetPackage()
 	compresspkg := ccompress.GetPackage()
+	conartistpkg := cconartist.GetPackage()
 	corepkg := ccore.GetPackage()
 	cryptopkg := ccrypto.GetPackage()
 	ecspkg := cecs.GetPackage()
@@ -56,15 +62,19 @@ func GetPackage() *denv.Package {
 	filesystempkg := cfilesystem.GetPackage()
 	charonpkg := charon.GetPackage()
 	genericspkg := cgenerics.GetPackage()
+	gx2pkg := cgx2.GetPackage()
 	hydrapkg := chydra.GetPackage()
 	hashpkg := chash.GetPackage()
 	jobspkg := cjobs.GetPackage()
 	jsonpkg := cjson.GetPackage()
+	kalmanpkg := ckalman.GetPackage()
 	mathpkg := cmath.GetPackage()
+	mmiopkg := cmmio.GetPackage()
 	msgpkg := cmsg.GetPackage()
 	pairpkg := cpair.GetPackage()
 	p2ppkg := cp2p.GetPackage()
 	randompkg := crandom.GetPackage()
+	raylibpkg := craylib.GetPackage()
 	socketpkg := csocket.GetPackage()
 	stringpkg := cstring.GetPackage()
 	superallocpkg := csuperalloc.GetPackage()
@@ -85,6 +95,7 @@ func GetPackage() *denv.Package {
 	mainpkg.AddPackage(basepkg)
 	mainpkg.AddPackage(cmdlinepkg)
 	mainpkg.AddPackage(compresspkg)
+	mainpkg.AddPackage(conartistpkg)
 	mainpkg.AddPackage(corepkg)
 	mainpkg.AddPackage(cryptopkg)
 	mainpkg.AddPackage(ecspkg)
@@ -93,15 +104,19 @@ func GetPackage() *denv.Package {
 	mainpkg.AddPackage(filesystempkg)
 	mainpkg.AddPackage(charonpkg)
 	mainpkg.AddPackage(genericspkg)
+	mainpkg.AddPackage(gx2pkg)
 	mainpkg.AddPackage(hydrapkg)
 	mainpkg.AddPackage(hashpkg)
 	mainpkg.AddPackage(jobspkg)
 	mainpkg.AddPackage(jsonpkg)
+	mainpkg.AddPackage(kalmanpkg)
 	mainpkg.AddPackage(mathpkg)
+	mainpkg.AddPackage(mmiopkg)
 	mainpkg.AddPackage(msgpkg)
 	mainpkg.AddPackage(pairpkg)
 	mainpkg.AddPackage(p2ppkg)
 	mainpkg.AddPackage(randompkg)
+	mainpkg.AddPackage(raylibpkg)
 	mainpkg.AddPackage(socketpkg)
 	mainpkg.AddPackage(stringpkg)
 	mainpkg.AddPackage(superallocpkg)
